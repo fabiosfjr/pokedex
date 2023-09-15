@@ -1,0 +1,80 @@
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon/${id}
+
+Nossa url é composta de ${IP = endereço}/${path = caminho de identificação do recurso}
+
+No caso dessa URL de exemplo, segue:
+
+IP: https://pokeapi.co
+
+Nesse caso, o IP é o domínio. Seria a mesma coisa que:
+    http://127.0.0.1:3000
+
+PATH: /api/v2/pokemon
+
+Request Method: GET | POST | PUT | DELETE 
+
+GET - BUSCAR OS POKEMONS
+POST - INSERIR UM NOVO POKEMON
+PUT - ATUALIZAR UM POKEMON EXISTENTE
+DELETE - DELETAR UM POKEMON
+
+QUERY STRING
+
+URL: https://pokeapi.co/api/v2/pokemon?
+
+Query String é tudo que vem depois do ponto ? e é caracterizada como chave/valor
+
+Exemplo, caso eu queira trazer os pokemons do tipo grass, a url ficaria assim:
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass
+
+para adicionar mais uma condição, utiliza-se o &:
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+
+pegando um outro exemplo de URL:
+
+https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+
+O que vem depois do ? é q Query String:
+
+offset=20
+limit=20
+
+Esses parâmetros significam a paginação da API
+
+HEADERS
+
+É uma especie de configuração da nossa requisição
+
+Request Headers
+    - Configuração da API
+
+Response Headers
+    - Configuração da API
+
+
+BODY - É o corpo da Requisição
+
+exemplo: Utilizando o método POST, o body ficaria mais ou menos assim:
+
+Request Headers:
+    content-type: application/json
+
+Request Body:
+{
+    "name": "teste"
+}
+
+STATUS CODE
+
+200 - OK
+201 - CREATED
+204 - NO CONTENT
+300
+301
+400 - BAD REQUEST
+404 - NOT FOUND
+500 - 
